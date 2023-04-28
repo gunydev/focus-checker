@@ -73,6 +73,10 @@
   <script>
     let hasFocus = true;
 
+    window.addEventListener("load", function (event) {
+      console.log("Web init !!")
+      window.focus()
+    });
     // detect if the browser window is in focus
     window.addEventListener("focus", function (event) {
       console.log("You are currently focused on this page.")
