@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/main.js"></script>
+  <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+</script>
+  <div class="container">
+    <h1>Focus Check</h1>
+    <h3>Check focus detail in vConsole !!</h3>
+  </div>
+  <script>
+    let hasFocus = true;
+
+    // detect if the browser window is in focus
+    window.addEventListener("focus", function (event) {
+      console.log("You are currently focused on this page.")
+      hasFocus = true;
+    });
+
+    // detect if the browser window is out of focus
+    window.addEventListener("blur", function (event) {
+      console.log("You are currently not focused on this page.")
+      hasFocus = false;
+    });
+
+  </script>
+
+</body>
+
+</html>
